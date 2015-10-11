@@ -28,7 +28,7 @@ hold on
 
 %%Plots B on the graph
 %%Plots in a green color
-%%plot(B(1,:), B(2,:), 'g');
+plot(B(1,:), B(2,:), 'g');
 
 %%Transpose of A
 C = A';
@@ -42,4 +42,4 @@ F = C*D90;
 
 %%Plots F on the graph
 %%Plots the normal color(blue)
-%%plot(F(:,1), F(:,2));
+plot(F(:,1), F(:,2));
