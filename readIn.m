@@ -4,6 +4,7 @@ clear all
 clf
 
 %%fileID reads in the text file
+%% Boult shape
 fileID = fopen('part2.txt','r');
 
 %%This specifies the format of the file that we are reading in
@@ -27,7 +28,7 @@ B = 2*A;
 hold on
 
 %%Plots B on the graph
-%%Plots in a green color
+%%Green color
 plot(B(1,:), B(2,:), 'g');
 
 %%Transpose of A
@@ -36,10 +37,13 @@ C = A';
 %%Rotation of 90 degrees
 D90 = [cos(pi/2) -sin(pi/2); sin(pi/2) cos(pi/2)];
 
-%%F matrice 
-%%Transpose of A rotated by 90 degrees
-F = C*D90;
+%%E matrice 
+%%Rotation of 90 degrees
+E = [0 -1; 1 0];
+
+%%Rotate our tranposed matrix by 90 degrees
+F = C*E;
 
 %%Plots F on the graph
-%%Plots the normal color(blue)
+%%Blue color
 plot(F(:,1), F(:,2));
