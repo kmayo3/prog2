@@ -51,6 +51,7 @@ B = fscanf(fileID, formatSpec, sizeB);
 hold on
 plot(B(1,:), B(2 ,:),'r');
 
-C = A' * B
+
+C = A' * B;
 
 plot(C(1,:), C(2 ,:),'r');
