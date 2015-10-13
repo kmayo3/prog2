@@ -25,7 +25,7 @@ plot(xDiag,A);
 plot(xDiag,B);
 %%fileID reads in the text file
 fileID = fopen('part3.txt','r');
-dlmwrite('part3.txt',A,',');
+%%M =csvread('part3.txt');
 %%This specifies the format of the file that we are reading in
 formatSpec = '%f %f';
 
@@ -35,8 +35,7 @@ amat = A(1, 3:6);
 %%Reads the text file, specifies the format, and sets the size
 A = fscanf(fileID, formatSpec, sizeA);
 
-Atrans = dlmread('part3.txt','\t',2,1);
-%%C = fscanf(fileID, formatSpec, amat);
+%%Atrans = dlmread('part3.txt','\t',0,6);
 
 %%Plots A
 %%Red color
@@ -54,5 +53,5 @@ hold on
 
 plot(B(1,:), B(2 ,:),'r');
 
-C = Atrans' * B;
+C = A' * B;
 plot(C(1,:), C(2 ,:),'r');
