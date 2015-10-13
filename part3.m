@@ -25,17 +25,18 @@ plot(xDiag,A);
 plot(xDiag,B);
 %%fileID reads in the text file
 fileID = fopen('part3.txt','r');
-
+dlmwrite('part3.txt',A,',');
 %%This specifies the format of the file that we are reading in
 formatSpec = '%f %f';
 
 %%This sets the size of the matrice to be read in
-sizeA = [1 6];
-
+sizeA = [2 6];
+amat = A(1, 3:6);
 %%Reads the text file, specifies the format, and sets the size
 A = fscanf(fileID, formatSpec, sizeA);
+
+Atrans = dlmread('part3.txt','\t',2,1);
 %%C = fscanf(fileID, formatSpec, amat);
-amat = A(1, 3:6);
 
 %%Plots A
 %%Red color
@@ -50,4 +51,8 @@ sizeB = [2 12];
 B = fscanf(fileID, formatSpec, sizeB);
 
 hold on
+
 plot(B(1,:), B(2 ,:),'r');
+
+C = Atrans' * B;
+plot(C(1,:), C(2 ,:),'r');
