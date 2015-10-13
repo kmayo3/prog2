@@ -30,15 +30,16 @@ fileID = fopen('part3.txt','r');
 formatSpec = '%f %f';
 
 %%This sets the size of the matrice to be read in
-sizeA = [2 3];
+sizeA = [1 6];
 
-%%Set matrice A
 %%Reads the text file, specifies the format, and sets the size
 A = fscanf(fileID, formatSpec, sizeA);
+%%C = fscanf(fileID, formatSpec, amat);
+amat = A(1, 3:6);
 
 %%Plots A
 %%Red color
-plot(A(1,:), A(2 ,:),'r');
+%%plot(A(1,:), A(2 ,:),'r');
 
 fileID = fopen('shape2.txt','r'); 
 
@@ -50,23 +51,3 @@ B = fscanf(fileID, formatSpec, sizeB);
 
 hold on
 plot(B(1,:), B(2 ,:),'r');
-
-
-C = A' * B;
-
-plot(C(1,:), C(2 ,:),'r');
-
-%%fileID reads in the text file
-%%fileID = fopen('part3.txt','r');
-
-%%This specifies the format of the file that we are reading in
-%%formatSpec = '%f %f';
-
-%%This sets the size of the matrice to be read in
-%%sizeD = [2 1];
-
-%%Set matrice A
-%%Reads the text file, specifies the format, and sets the size
-%%D = fscanf(fileID, formatSpec, sizeD);
-
-%%E = A' * D;
