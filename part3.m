@@ -26,13 +26,14 @@ fileID = fopen('shape2.txt','r');
 
 formatSpec = '%f %f';
 
-sizeB = [11 2];
+sizeB = [2 11];
 
 B = fscanf(fileID, formatSpec, sizeB);
 
 hold on
 
-plot(B(1,:), B(2 ,:),'r');
-hold on 
-C =  M' * B';
-plot(C(1,:), C(2 ,:),'g');
+plot(B(1,:), B(2,:),'r');
+
+C =  M' * B;
+
+plot(C(1,:), C(2,:),'m');

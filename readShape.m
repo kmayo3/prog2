@@ -44,6 +44,6 @@ D = A';
 E = D*A;
 
 %%Plots E on the graph
-%% Orthogonal Projection of original shape
+%%Orthogonal Projection of original shape
 %%Blue color
 plot(E(1,:), E(2,:), 'b');
