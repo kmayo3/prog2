@@ -13,7 +13,7 @@ formatSpec = '%f %f';
 
 %%Reads the text file, specifies the format, and sets the size
 filename = 'newpart3.txt';
-M = dlmread(filename, ' ',1,2);
+M = dlmread(filename, ' ',0,2);
 
 %%amat = A(1, 3:6);
 %%Atrans = dlmread('part3.txt','\t',0,6);
