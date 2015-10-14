@@ -37,3 +37,11 @@ plot(B(1,:), B(2,:),'r');
 C =  M' * B;
 
 plot(C(1,:), C(2,:),'m');
+
+filenameD = 'part3.txt';
+
+D = dlmread(filenameD,' ',0,2);
+
+E = D' * B;
+
+plot(E(1,:), E(2,:), 'b');
